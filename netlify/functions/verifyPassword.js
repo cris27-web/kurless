@@ -1,5 +1,5 @@
 // netlify/functions/verifyPassword.js
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs'); // Use bcryptjs instead of bcrypt
 
 exports.handler = async (event, context) => {
     if (event.httpMethod !== 'POST') {
@@ -31,14 +31,13 @@ exports.handler = async (event, context) => {
         const isMatch = await bcrypt.compare(password, hashedPassword);
 
         if (isMatch) {
-            // Generate a simple JWT or any token. For simplicity, we'll use a timestamp token.
-            // For production, consider using a proper JWT library.
-            const token = btoa(JSON.stringify({ authenticated: true, timestamp: Date.now() }));
+            // Generate a simple token (Base64-encoded JSON)
+            const token = Buffer.from(JSON.stringify({ authenticated: true, timestamp: Date.now() })).toString('base64');
 
             return {
                 statusCode: 200,
                 headers: {
-                    'Set-Cookie': `auth_token=${token}; HttpOnly; Path=/; Max-Age=3600`,
+                    'Set-Cookie': `auth_token=${token}; HttpOnly; Path=/; Max-Age=3600; SameSite=Strict; Secure`,
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ message: 'Authentication successful.' }),
@@ -50,7 +49,7 @@ exports.handler = async (event, context) => {
             };
         }
     } catch (error) {
-        console.error(error);
+        console.error('Error in verifyPassword function:', error);
         return {
             statusCode: 500,
             body: JSON.stringify({ message: 'Internal Server Error' }),

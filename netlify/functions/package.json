@@ -1,6 +1,9 @@
 {
   "name": "functions",
   "version": "1.0.0",
+   "dependencies": {
+    "bcryptjs": "^2.4.3" 
+	},
   "main": "verifyPassword.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -8,8 +11,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "bcrypt": "^5.1.1"
-  }
+  "description": ""
 }
