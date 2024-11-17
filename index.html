@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<! index.html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurless</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Google Fonts for Shopify Components -->
+    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<!-- Notification Bar -->
+    <div class="notification-bar">
+    <div class="notification-bar__content">
+        <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		  
+    </div>
+</div>
+	
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container container">
+            <img src="assets/images/logo.png" alt="Kurless Store Logo" class="header__logo">
+            <h1 class="header__title">Kurless Store</h1>
+            <nav class="nav">
+                <button class="nav__toggle" aria-label="Toggle navigation">&#9776;</button>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">Catalogue</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="products-section__title">Popular Items</h2>
+                <div class="products-grid">
+                    
+                    <!-- Example Products without "Add to Cart" button -->
+                    <div class="product-card">
+                        <img src="assets/images/socks.png" alt="Clay Sculpture 1" class="product-card__image">
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">ACM Socks</h3>
+                            <p class="product-card__price">&pound;15.99<p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/images/Sculpt2.png" alt="Clay Sculpture 2" class="product-card__image">
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Clay Sculpture 2</h3>
+                            <p class="product-card__price">&pound;39.99</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/images/Sculpt3.png" alt="Clay Sculpture 3" class="product-card__image">
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Clay Sculpture 3</h3>
+                            <p class="product-card__price">&pound;24.99</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Shopify Buy Button Embed Code -->
+                    <div class="product-card">
+                        <div id="product-component-1729800134598"></div>
+                    </div>
+                    <!-- End of Shopify Buy Button Embed Code -->
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2024 KurlessACM. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll-to-Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">&#8679;</button>
+
+    <!-- Optional: Include your JavaScript file for navigation toggle -->
+    <script src="js/scripts.js"></script>
+
+    <!-- Shopify Buy Button Script -->
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'btvjzr-h9.myshopify.com',
+          storefrontAccessToken: 'f3c07bfc83bc6d467fdd885a67e09ef2',
+        });
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('product', {
+            id: '9374108844361',
+            node: document.getElementById('product-component-1729800134598'),
+            moneyFormat: '%C2%A3%7B%7Bamount%7D%7D',
+            options: {
+              // ... (Shopify Buy Button options remain the same) ...
+            },
+          });
+        });
+      }
+    })();
+    /*]]>*/
+    </script>
+</body>
+</html>

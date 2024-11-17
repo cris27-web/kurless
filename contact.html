@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<! contact.html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurless</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Quantico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+ <!-- Notification Bar -->
+    <!-- Notification Bar -->
+    <div class="notification-bar">
+    <div class="notification-bar__content">
+        <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		  
+    </div>
+</div>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container container">
+            <img src="assets/images/logo.png" alt="SplinterShop Logo" class="header__logo">
+            <h1 class="header__title">Kurless Store</h1>
+            <nav class="nav">
+                <button class="nav__toggle" aria-label="Toggle navigation">&#9776;</button>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">Catalogue</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="contact-section__title">Get in Touch</h2>
+                <!-- Contact Form Box -->
+                <div class="contact-form-box">
+                    <form class="contact-section__form" action="submit_form.php" method="post">
+                        <!-- Name Field -->
+                        <label for="name" class="contact-section__label">Name</label>
+                        <input type="text" id="name" name="name" class="contact-section__input" placeholder="Your Name" required>
+
+                        <!-- Email Field -->
+                        <label for="email" class="contact-section__label">Email</label>
+                        <input type="email" id="email" name="email" class="contact-section__input" placeholder="Your Email" required>
+
+                        <!-- Subject Field -->
+                        <label for="subject" class="contact-section__label">Subject</label>
+                        <input type="text" id="subject" name="subject" class="contact-section__input" placeholder="Subject">
+
+                        <!-- Message Field -->
+                        <label for="message" class="contact-section__label">Message</label>
+                        <textarea id="message" name="message" class="contact-section__textarea" rows="5" placeholder="Your Message" required></textarea>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="contact-section__button">Send Message</button>
+                    </form>
+                </div>
+                <!-- End of Contact Form Box -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2024 KurlessACM. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll-to-Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">&#8679;</button>
+
+    <!-- Optional: Include your JavaScript file for navigation toggle -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

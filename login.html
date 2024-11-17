@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kurless - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Main Content: Login Form -->
+    <main>
+        <section class="subscription-section">
+            <div class="container">
+                <!-- Big Logo -->
+                <img src="assets/images/logo.png" alt="Kurless Store Big Logo" class="subscription-section__logo">
+                <h2 class="subscription-section__title">Login</h2> 
+                <!-- Login Form -->
+                <form id="login-form" class="subscription-form">
+                    <!-- Honeypot Field (Hidden for Spam Protection) -->
+                    <input type="text" name="_gotcha" style="display:none" aria-hidden="true">
+
+                    <!-- Password Field -->
+                    <input type="password" name="password" id="password" class="subscription-form__input" placeholder="Enter your password" required aria-label="Password">
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="subscription-form__button">Login</button>
+                </form>
+                <!-- Error and Success Messages -->
+                <div id="form-message"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2024 KurlessACM. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll-to-Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">&#8679;</button>
+
+    <!-- JavaScript for Form Handling -->
+    <script>
+        document.getElementById('login-form').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const password = document.getElementById('password').value;
+            const formMessage = document.getElementById('form-message');
+
+            try {
+                const response = await fetch('/.netlify/functions/verifyPassword', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ password })
+                });
+
+                const data = await response.json();
+
+                if (response.status === 200) {
+                    formMessage.innerHTML = '<p class="subscription-form__success">Login successful! Redirecting...</p>';
+                    // Redirect to protected page after a short delay
+                    setTimeout(() => {
+                        window.location.href = 'index.html'; // Change to your desired protected page
+                    }, 1500); // 1.5 seconds delay
+                } else {
+                    formMessage.innerHTML = `<p class="subscription-form__error">${data.message}</p>`;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                formMessage.innerHTML = '<p class="subscription-form__error">An error occurred. Please try again later.</p>';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<! shop.html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurless</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Quantico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+ <!-- Notification Bar -->
+    <div class="notification-bar">
+    <div class="notification-bar__content">
+        <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		  
+    </div>
+</div>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container container">
+		<img src="assets/images/logo.png" alt="SplinterShop Logo" class="header__logo">
+            <h1 class="header__title">Kurless Store</h1>
+            <nav class="nav">
+                <button class="nav__toggle" aria-label="Toggle navigation">&#9776;</button>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">Catalogue</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="products-section">
+            <div class="container">
+                <h2 class="products-section__title">Our Collection</h2>
+                
+                <!-- Products Grid -->
+                <div class="products-grid">
+                    
+                    <!-- Example Products -->
+                    <div class="product-card">
+                        <img src="assets/images/Sculpt1.png" alt="Clay Sculpture 1" class="product-card__image">
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Clay Sculpture 1</h3>
+                            <p class="product-card__price">&pound;29.99</p>
+                            <button class="product-card__buy-button">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/images/Sculpt2.png" alt="Clay Sculpture 2" class="product-card__image">
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Clay Sculpture 2</h3>
+                            <p class="product-card__price">&pound;39.99</p>
+                            <button class="product-card__buy-button">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/images/Sculpt3.png" alt="Clay Sculpture 3" class="product-card__image">
+                        <div class="product-card__info">
+                            <h3 class="product-card__title">Clay Sculpture 3</h3>
+                            <p class="product-card__price">&pound;24.99</p>
+                            <button class="product-card__buy-button">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- End of Example Products -->
+
+                    <!-- Shopify Collection Buy Button Embed Code -->
+                    <div id='collection-component-1729800685061' class="shopify-products"></div>
+                    <script type="text/javascript">
+                    /*<![CDATA[*/
+                    (function () {
+                      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+                      if (window.ShopifyBuy) {
+                        if (window.ShopifyBuy.UI) {
+                          ShopifyBuyInit();
+                        } else {
+                          loadScript();
+                        }
+                      } else {
+                        loadScript();
+                      }
+                      function loadScript() {
+                        var script = document.createElement('script');
+                        script.async = true;
+                        script.src = scriptURL;
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                        script.onload = ShopifyBuyInit;
+                      }
+                      function ShopifyBuyInit() {
+                        var client = ShopifyBuy.buildClient({
+                          domain: 'btvjzr-h9.myshopify.com',
+                          storefrontAccessToken: 'f3c07bfc83bc6d467fdd885a67e09ef2',
+                        });
+                        ShopifyBuy.UI.onReady(client).then(function (ui) {
+                          ui.createComponent('collection', {
+                            id: '651402805577',
+                            node: document.getElementById('collection-component-1729800685061'),
+                            moneyFormat: '%C2%A3%7B%7Bamount%7D%7D',
+                            options: {
+                              "product": {
+                                "styles": {
+                                  "product": {
+                                    "@media (min-width: 601px)": {
+                                      "max-width": "calc(33.333% - 20px)", /* 3 per row */
+                                      "margin-left": "20px",
+                                      "margin-bottom": "50px",
+                                      "width": "calc(33.333% - 20px)"
+                                    },
+                                    "img": {
+                                      "height": "calc(100% - 15px)",
+                                      "position": "absolute",
+                                      "left": "0",
+                                      "right": "0",
+                                      "top": "0"
+                                    },
+                                    "imgWrapper": {
+                                      "padding-top": "calc(75% + 15px)",
+                                      "position": "relative",
+                                      "height": "0"
+                                    }
+                                  },
+                                  "title": {
+                                    "font-family": "Quantico, sans-serif",
+                                    "color": "#d7d7d7"
+                                  },
+                                  "button": {
+                                    "font-family": "Quantico, sans-serif",
+                                    "font-weight": "bold",
+                                    ":hover": {
+                                      "background-color": "#961b1b"
+                                    },
+                                    "background-color": "#581010",
+                                    ":focus": {
+                                      "background-color": "#961b1b"
+                                    },
+                                    "border-radius": "17px"
+                                  },
+                                  "price": {
+                                    "font-family": "Quantico, sans-serif",
+                                    "font-weight": "bold",
+                                    "color": "#d7d7d7"
+                                  },
+                                  "compareAt": {
+                                    "font-family": "Quantico, sans-serif",
+                                    "font-weight": "bold",
+                                    "color": "#d7d7d7"
+                                  },
+                                  "unitPrice": {
+                                    "font-family": "Quantico, sans-serif",
+                                    "font-weight": "bold",
+                                    "color": "#d7d7d7"
+                                  }
+                                },
+                                "text": {
+                                  "button": "Add to cart"
+                                },
+                                "googleFonts": [
+                                  "Quantico"
+                                ]
+                              },
+                              "productSet": {
+                                "styles": {
+                                  "products": {
+                                    "@media (min-width: 601px)": {
+                                      "margin-left": "-20px"
+                                    }
+                                  }
+                                }
+                              },
+                              "modalProduct": {
+                                "contents": {
+                                  "img": false,
+                                  "imgWithCarousel": true,
+                                  "button": false,
+                                  "buttonWithQuantity": true
+                                },
+                                "styles": {
+                                  "product": {
+                                    "@media (min-width: 601px)": {
+                                      "max-width": "100%",
+                                      "margin-left": "0px",
+                                      "margin-bottom": "0px"
+                                    }
+                                  },
+                                  "button": {
+                                    "font-family": "Quantico, sans-serif",
+                                    "font-weight": "bold",
+                                    ":hover": {
+                                      "background-color": "#961b1b"
+                                    },
+                                    "background-color": "#581010",
+                                    ":focus": {
+                                      "background-color": "#961b1b"
+                                    },
+                                    "border-radius": "17px"
+                                  },
+                                  "title": {
+                                    "font-family": "Quantico, sans-serif",
+                                    "font-weight": "bold",
+                                    "font-size": "26px",
+                                    "color": "#000000"
+                                  },
+                                  "price": {
+                                    "font-family": "Quantico, sans-serif",
+                                    "font-weight": "bold",
+                                    "font-size": "18px",
+                                    "color": "#000000"
+                                  },
+                                  "compareAt": {
+                                    "font-family": "Quantico, sans-serif",
+                                    "font-weight": "bold",
+                                    "font-size": "15.299999999999999px",
+                                    "color": "#000000"
+                                  },
+                                  "unitPrice": {
+                                    "font-family": "Quantico, sans-serif",
+                                    "font-weight": "bold",
+                                    "font-size": "15.299999999999999px",
+                                    "color": "#000000"
+                                  },
+                                  "description": {
+                                    "font-family": "Quantico, sans-serif",
+                                    "font-weight": "bold",
+                                    "color": "#000000"
+                                  }
+                                },
+                                "googleFonts": [
+                                  "Quantico"
+                                ],
+                                "text": {
+                                  "button": "Add to cart"
+                                }
+                              },
+                              "option": {},
+                              "cart": {
+                                "styles": {
+                                  "button": {
+                                    "font-family": "Quantico, sans-serif",
+                                    "font-weight": "bold",
+                                    ":hover": {
+                                      "background-color": "#961b1b"
+                                    },
+                                    "background-color": "#581010",
+                                    ":focus": {
+                                      "background-color": "#961b1b"
+                                    },
+                                    "border-radius": "17px"
+                                  },
+                                  "title": {
+                                    "color": "#000000"
+                                  },
+                                  "header": {
+                                    "color": "#000000"
+                                  },
+                                  "lineItems": {
+                                    "color": "#000000"
+                                  },
+                                  "subtotalText": {
+                                    "color": "#000000"
+                                  },
+                                  "subtotal": {
+                                    "color": "#000000"
+                                  },
+                                  "notice": {
+                                    "color": "#000000"
+                                  },
+                                  "currency": {
+                                    "color": "#000000"
+                                  },
+                                  "close": {
+                                    "color": "#000000",
+                                    ":hover": {
+                                      "color": "#000000"
+                                    }
+                                  },
+                                  "empty": {
+                                    "color": "#000000"
+                                  },
+                                  "noteDescription": {
+                                    "color": "#000000"
+                                  },
+                                  "discountText": {
+                                    "color": "#000000"
+                                  },
+                                  "discountIcon": {
+                                    "fill": "#000000"
+                                  },
+                                  "discountAmount": {
+                                    "color": "#000000"
+                                  }
+                                },
+                                "text": {
+                                  "total": "Subtotal",
+                                  "button": "Checkout"
+                                },
+                                "contents": {
+                                  "note": true
+                                },
+                                "popup": false,
+                                "googleFonts": [
+                                  "Quantico"
+                                ]
+                              },
+                              "toggle": {
+                                "styles": {
+                                  "toggle": {
+                                    "font-family": "Quantico, sans-serif",
+                                    "font-weight": "bold",
+                                    "background-color": "#581010",
+                                    ":hover": {
+                                      "background-color": "#961b1b"
+                                    },
+                                    ":focus": {
+                                      "background-color": "#961b1b"
+                                    }
+                                  }
+                                },
+                                "googleFonts": [
+                                  "Quantico"
+                                ]
+                              },
+                              "lineItem": {
+                                "styles": {
+                                  "variantTitle": {
+                                    "color": "#000000"
+                                  },
+                                  "title": {
+                                    "color": "#000000"
+                                  },
+                                  "price": {
+                                    "color": "#000000"
+                                  },
+                                  "fullPrice": {
+                                    "color": "#000000"
+                                  },
+                                  "discount": {
+                                    "color": "#000000"
+                                  },
+                                  "discountIcon": {
+                                    "fill": "#000000"
+                                  },
+                                  "quantity": {
+                                    "color": "#000000"
+                                  },
+                                  "quantityIncrement": {
+                                    "color": "#000000",
+                                    "border-color": "#000000"
+                                  },
+                                  "quantityDecrement": {
+                                    "color": "#000000",
+                                    "border-color": "#000000"
+                                  },
+                                  "quantityInput": {
+                                    "color": "#000000",
+                                    "border-color": "#000000"
+                                  }
+                                }
+                              }
+                            },
+                          });
+                        });
+                      }
+                    })();
+                    /*]]>*/
+                    </script>
+                    <!-- End of Shopify Collection Buy Button Embed Code -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2024 KurlessACM. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Optional: Include your JavaScript file for navigation toggle -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
