@@ -43,38 +43,41 @@
     <button class="scroll-to-top" aria-label="Scroll to top">&#8679;</button>
 
     <!-- JavaScript for Form Handling -->
-    <script>
-        document.getElementById('login-form').addEventListener('submit', async function(event) {
-            event.preventDefault(); // Prevent the default form submission
+<script>
+  document.getElementById('login-form').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevent the default form submission
 
-            const password = document.getElementById('password').value;
-            const formMessage = document.getElementById('form-message');
+    const password = document.getElementById('password').value;
+    const formMessage = document.getElementById('form-message');
 
-            try {
-                const response = await fetch('/.netlify/functions/verifyPassword', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ password })
-                });
+    try {
+      const response = await fetch('/.netlify/functions/verifyPassword', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ password })
+      });
 
-                const data = await response.json();
+      const data = await response.json();
 
-                if (response.status === 200) {
-                    formMessage.innerHTML = '<p class="subscription-form__success">Login successful! Redirecting...</p>';
-                    // Redirect to protected page after a short delay
-                    setTimeout(() => {
-                        window.location.href = 'index.html'; // Change to your desired protected page
-                    }, 1000); // 1 seconds delay
-                } else {
-                    formMessage.innerHTML = `<p class="subscription-form__error">${data.message}</p>`;
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                formMessage.innerHTML = '<p class="subscription-form__error">An error occurred. Please try again later.</p>';
-            }
-        });
-    </script>
+      if (response.status === 200) {
+        // Store authentication state in localStorage
+        localStorage.setItem('authenticated', 'true');
+
+        formMessage.innerHTML = '<p class="subscription-form__success">Login successful! Redirecting...</p>';
+        // Redirect to protected page after a short delay
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 1000); // 1 second delay
+      } else {
+        formMessage.innerHTML = `<p class="subscription-form__error">${data.message}</p>`;
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      formMessage.innerHTML = '<p class="subscription-form__error">An error occurred. Please try again later.</p>';
+    }
+  });
+</script>
 </body>
 </html>
