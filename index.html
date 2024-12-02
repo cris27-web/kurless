@@ -65,7 +65,7 @@
                     </div>
 					
 					<div class="product-card">
-						<div id='product-component-1733170356733'></div>
+						<div id='product-component-1733174734008'></div>
 					 </div>
 					
                     <!-- <div class="product-card">
@@ -333,13 +333,13 @@
   }
   function ShopifyBuyInit() {
     var client = ShopifyBuy.buildClient({
-      domain: 'wg1jg3-s1.myshopify.com',
-      storefrontAccessToken: '6dbd8f3983b2222a0d22da36dc782902',
+      domain: 'e12707-f1.myshopify.com',
+      storefrontAccessToken: 'fbbc74a8d93f3af2c92b63db0d5c0320',
     });
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('product', {
-        id: '14935299817807',
-        node: document.getElementById('product-component-1733170356733'),
+        id: '14752518537560',
+        node: document.getElementById('product-component-1733174734008'),
         moneyFormat: '%C2%A3%7B%7Bamount%7D%7D',
         options: {
   "product": {
@@ -353,29 +353,51 @@
         "text-align": "left"
       },
       "title": {
-        "font-size": "26px"
+        "font-family": "Quantico, sans-serif",
+        "font-weight": "normal",
+        "font-size": "26px",
+        "color": "#000000"
       },
       "button": {
-        "font-family": "Avant Garde, sans-serif",
+        "font-family": "Quantico, sans-serif",
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px",
+        "color": "#fafafa",
         ":hover": {
-          "background-color": "#a41414"
+          "color": "#fafafa",
+          "background-color": "#a1a1a1"
         },
-        "background-color": "#b61616",
+        "background-color": "#b3b3b3",
         ":focus": {
-          "background-color": "#a41414"
+          "background-color": "#a1a1a1"
         },
         "border-radius": "0px",
-        "padding-left": "25px",
-        "padding-right": "25px"
+        "padding-left": "52px",
+        "padding-right": "52px"
+      },
+      "quantityInput": {
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px"
       },
       "price": {
-        "font-size": "18px"
+        "font-family": "Quantico, sans-serif",
+        "font-size": "15px",
+        "color": "#666666"
       },
       "compareAt": {
-        "font-size": "15.299999999999999px"
+        "font-family": "Quantico, sans-serif",
+        "font-size": "12.75px",
+        "color": "#666666"
       },
       "unitPrice": {
-        "font-size": "15.299999999999999px"
+        "font-family": "Quantico, sans-serif",
+        "font-size": "12.75px",
+        "color": "#666666"
+      },
+      "description": {
+        "font-family": "Quantico, sans-serif"
       }
     },
     "layout": "horizontal",
@@ -387,7 +409,10 @@
     "width": "100%",
     "text": {
       "button": "Add to cart"
-    }
+    },
+    "googleFonts": [
+      "Quantico"
+    ]
   },
   "productSet": {
     "styles": {
@@ -414,17 +439,27 @@
         }
       },
       "button": {
-        "font-family": "Avant Garde, sans-serif",
+        "font-family": "Quantico, sans-serif",
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px",
+        "color": "#fafafa",
         ":hover": {
-          "background-color": "#a41414"
+          "color": "#fafafa",
+          "background-color": "#a1a1a1"
         },
-        "background-color": "#b61616",
+        "background-color": "#b3b3b3",
         ":focus": {
-          "background-color": "#a41414"
+          "background-color": "#a1a1a1"
         },
         "border-radius": "0px",
-        "padding-left": "25px",
-        "padding-right": "25px"
+        "padding-left": "52px",
+        "padding-right": "52px"
+      },
+      "quantityInput": {
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px"
       },
       "title": {
         "font-family": "Helvetica Neue, sans-serif",
@@ -449,23 +484,49 @@
         "font-weight": "normal",
         "font-size": "15.299999999999999px",
         "color": "#4c4c4c"
+      },
+      "description": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "14px",
+        "color": "#4c4c4c"
       }
     },
+    "googleFonts": [
+      "Quantico"
+    ],
     "text": {
       "button": "Add to cart"
     }
   },
-  "option": {},
+  "option": {
+    "styles": {
+      "label": {
+        "font-family": "Quantico, sans-serif"
+      },
+      "select": {
+        "font-family": "Quantico, sans-serif"
+      }
+    },
+    "googleFonts": [
+      "Quantico"
+    ]
+  },
   "cart": {
     "styles": {
       "button": {
-        "font-family": "Avant Garde, sans-serif",
+        "font-family": "Quantico, sans-serif",
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px",
+        "color": "#fafafa",
         ":hover": {
-          "background-color": "#a41414"
+          "color": "#fafafa",
+          "background-color": "#a1a1a1"
         },
-        "background-color": "#b61616",
+        "background-color": "#b3b3b3",
         ":focus": {
-          "background-color": "#a41414"
+          "background-color": "#a1a1a1"
         },
         "border-radius": "0px"
       }
@@ -473,21 +534,37 @@
     "text": {
       "total": "Subtotal",
       "button": "Checkout"
-    }
+    },
+    "googleFonts": [
+      "Quantico"
+    ]
   },
   "toggle": {
     "styles": {
       "toggle": {
-        "font-family": "Avant Garde, sans-serif",
-        "background-color": "#b61616",
+        "font-family": "Quantico, sans-serif",
+        "background-color": "#b3b3b3",
         ":hover": {
-          "background-color": "#a41414"
+          "background-color": "#a1a1a1"
         },
         ":focus": {
-          "background-color": "#a41414"
+          "background-color": "#a1a1a1"
         }
+      },
+      "count": {
+        "font-size": "14px",
+        "color": "#fafafa",
+        ":hover": {
+          "color": "#fafafa"
+        }
+      },
+      "iconPath": {
+        "fill": "#fafafa"
       }
-    }
+    },
+    "googleFonts": [
+      "Quantico"
+    ]
   }
 },
       });
