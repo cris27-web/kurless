@@ -187,21 +187,39 @@ body {
    Responsive Styles for Subscription Form
 ================================= */
 
+/* Large Devices (Desktops) */
+@media (max-width: 1200px) {
+    .subscription-section {
+        padding: 80px 20px;
+    }
+
+    .subscription-section__title {
+        font-size: 1.9rem;
+    }
+
+    .subscription-section__description {
+        font-size: 1.05rem;
+        margin-bottom: 28px;
+    }
+
+    .subscription-form__input {
+        max-width: 280px;
+    }
+}
+
 /* Medium Devices (Tablets) */
 @media (max-width: 992px) {
     .subscription-section {
-        padding: 80px 15px;
+        padding: 70px 15px;
     }
 
     .subscription-section__title {
         font-size: 1.8rem;
-        padding: 0 5px;
     }
 
     .subscription-section__description {
         font-size: 1rem;
         margin-bottom: 25px;
-        padding: 0 5px;
     }
 
     .subscription-form__input {
@@ -209,7 +227,7 @@ body {
     }
 }
 
-/* Small Devices (Landscape Phones) */
+/* Small Devices (Large Phones) */
 @media (max-width: 768px) {
     .subscription-section {
         padding: 60px 10px;
@@ -236,18 +254,18 @@ body {
     }
 }
 
-/* Extra Small Devices (Portrait Phones) */
-@media (max-width: 576px) {
+/* Extra Small Devices (iPhone 6/7/8, X, 11 Pro, etc.) */
+@media (max-width: 414px) {
     .subscription-section {
-        padding: 50px 5px;
+        padding: 50px 10px;
     }
 
     .subscription-section__logo {
-        width: 150px;
+        width: 160px;
     }
 
     .subscription-section__title {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .subscription-section__description {
@@ -255,13 +273,13 @@ body {
     }
 
     .subscription-form {
-        flex-direction: column; /* Stacks input and button vertically on small screens */
-        align-items: stretch; /* Makes input and button full width */
+        flex-direction: column; /* Stack input and button vertically */
+        align-items: stretch; /* Full width */
     }
 
     .subscription-form__input,
     .subscription-form__button {
-        max-width: none; /* Allows full width */
+        max-width: none;
         width: 100%;
     }
 
@@ -271,6 +289,30 @@ body {
 
     .subscription-form__button {
         padding: 12px 15px;
+    }
+}
+
+/* Extra Extra Small Devices (iPhone 5/SE, older Android phones) */
+@media (max-width: 320px) {
+    .subscription-section {
+        padding: 40px 5px;
+    }
+
+    .subscription-section__logo {
+        width: 140px;
+    }
+
+    .subscription-section__title {
+        font-size: 1.3rem;
+    }
+
+    .subscription-section__description {
+        font-size: 0.85rem;
+    }
+
+    .subscription-form__input,
+    .subscription-form__button {
+        padding: 10px 12px;
     }
 }
 /* ================================
