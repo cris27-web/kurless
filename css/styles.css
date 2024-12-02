@@ -71,7 +71,7 @@ body {
    Subscription Section Styles
 ================================= */
 .subscription-section {
-    padding: 100px 0;
+    padding: 100px 20px; /* Added horizontal padding for smaller screens */
     background-color: var(--color-background);
     display: flex;
     flex-direction: column; /* Stack elements vertically */
@@ -96,6 +96,8 @@ body {
     margin-bottom: 20px;
     color: var(--color-text);
     text-align: center;
+    max-width: 800px; /* Limits the width for better readability */
+    padding: 0 10px;  /* Adds horizontal padding */
 }
 
 .subscription-section__description {
@@ -103,6 +105,8 @@ body {
     margin-bottom: 30px;
     color: var(--color-accent);
     text-align: center;
+    max-width: 700px; /* Limits the width for better readability */
+    padding: 0 10px;  /* Adds horizontal padding */
 }
 
 .subscription-form {
@@ -112,10 +116,11 @@ body {
     justify-content: center;
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
     gap: 10px; /* Adds space between input and button */
+    max-width: 100%; /* Ensures the form doesn't exceed the container width */
 }
 
 .subscription-form__input {
-    padding: 12px 30px; /* Match button padding */
+    padding: 12px 20px; /* Adjusted padding for better fit on small screens */
     flex: 1 1 250px; /* Allows the input to grow and shrink */
     max-width: 300px; /* Limits the maximum width */
     border: none; /* Remove existing border */
@@ -141,7 +146,7 @@ body {
 .subscription-form__button {
     padding: 12px 30px;
     background-color: var(--color-primary);
-	color: #555555;
+    color: #555555;
     border: none;
     border-radius: var(--border-radius); /* Same border-radius as input */
     font-size: 1rem;
@@ -182,17 +187,92 @@ body {
    Responsive Styles for Subscription Form
 ================================= */
 
-@media (max-width: 600px) {
-    .subscription-form {
-        flex-direction: column; /* Stacks input and button vertically on small screens */
-        gap: 15px;
+/* Medium Devices (Tablets) */
+@media (max-width: 992px) {
+    .subscription-section {
+        padding: 80px 15px;
     }
 
-    .subscription-form__button {
-        width: 100%; /* Makes the button full width on small screens */
+    .subscription-section__title {
+        font-size: 1.8rem;
+        padding: 0 5px;
+    }
+
+    .subscription-section__description {
+        font-size: 1rem;
+        margin-bottom: 25px;
+        padding: 0 5px;
+    }
+
+    .subscription-form__input {
+        max-width: 250px;
     }
 }
 
+/* Small Devices (Landscape Phones) */
+@media (max-width: 768px) {
+    .subscription-section {
+        padding: 60px 10px;
+    }
+
+    .subscription-section__logo {
+        width: 180px;
+    }
+
+    .subscription-section__title {
+        font-size: 1.6rem;
+    }
+
+    .subscription-section__description {
+        font-size: 0.95rem;
+    }
+
+    .subscription-form__input {
+        max-width: 220px;
+    }
+
+    .subscription-form__button {
+        padding: 12px 25px;
+    }
+}
+
+/* Extra Small Devices (Portrait Phones) */
+@media (max-width: 576px) {
+    .subscription-section {
+        padding: 50px 5px;
+    }
+
+    .subscription-section__logo {
+        width: 150px;
+    }
+
+    .subscription-section__title {
+        font-size: 1.4rem;
+    }
+
+    .subscription-section__description {
+        font-size: 0.9rem;
+    }
+
+    .subscription-form {
+        flex-direction: column; /* Stacks input and button vertically on small screens */
+        align-items: stretch; /* Makes input and button full width */
+    }
+
+    .subscription-form__input,
+    .subscription-form__button {
+        max-width: none; /* Allows full width */
+        width: 100%;
+    }
+
+    .subscription-form__input {
+        padding: 12px 15px;
+    }
+
+    .subscription-form__button {
+        padding: 12px 15px;
+    }
+}
 /* ================================
    Reset and Base Styles (Continued)
 ================================= */
