@@ -82,7 +82,7 @@ body {
 }
 
 .subscription-section__logo {
-    width: 150px; /* Adjust the size as needed */
+    width: 225px; /* Adjust the size as needed */
     height: auto;
     margin-bottom: 20px; /* Space between logo and title */
     animation: fadeIn 1s ease-in-out; /* Optional: Adds a fade-in effect */
@@ -141,7 +141,7 @@ body {
 .subscription-form__button {
     padding: 12px 30px;
     background-color: var(--color-primary);
-    color: var(--color-text);
+	color: #555555;
     border: none;
     border-radius: var(--border-radius); /* Same border-radius as input */
     font-size: 1rem;
@@ -248,53 +248,22 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    /* Added for better alignment */
+    justify-content: center; /* Centers the logo horizontally */
 }
 
 /* Logo Styles */
 .header__logo {
-    height: 65px; /* Reduced height from 50px to 40px */
+    height: 75px; /* Your specified height */
     width: auto;
-    margin-right: 10px; /* Reduced margin from 15px to 10px */
+    margin-right: 0; /* Remove margin to prevent shifting */
 }
 
-/* Adjust header__title to align with logo */
-.header__title {
-    font-size: 1.5rem; /* Reduced font size from 1.8rem to 1.5rem */
-    font-weight: 700;
+/* Navigation Styles */
+.nav {
+    position: absolute;
+    right: 20px; /* Adjust as needed for spacing from the right edge */
     display: flex;
     align-items: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .header__logo {
-        height: 35px; /* Reduced height from 40px to 35px */
-        margin-right: 8px; /* Reduced margin from 10px to 8px */
-    }
-
-    .header__title {
-        font-size: 1.3rem; /* Reduced font size from 1.5rem to 1.3rem */
-    }
-}
-
-@media (max-width: 480px) {
-    .header__logo {
-        height: 30px; /* Further reduced height for very small screens */
-        margin-right: 5px; /* Further reduced margin */
-    }
-
-    .header__title {
-        font-size: 1.1rem; /* Further reduced font size */
-    }
-}
-
-.nav {
-    position: relative;
 }
 
 .nav__list {
@@ -327,6 +296,34 @@ body {
     cursor: pointer;
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header__logo {
+        height: 35px; /* Reduced height for smaller screens */
+    }
+
+    .nav {
+        right: 10px; /* Adjust navigation position on smaller screens */
+    }
+
+    .nav__item {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__logo {
+        height: 30px; /* Further reduced height */
+    }
+
+    .nav {
+        right: 5px;
+    }
+
+    .nav__item {
+        margin: 0 5px;
+    }
+}
 /* ================================
    Hero Section
 ================================= */
