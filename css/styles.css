@@ -358,7 +358,6 @@ body {
 .header {
     background-color: var(--color-header-bg); /* Semi-transparent light gray */
     color: var(--color-header-text);
-    padding: 1px 0;
     position: sticky;
     top: 30px; /* Adjusted to account for notification bar height */
     z-index: 1000;
@@ -375,7 +374,7 @@ body {
 
 /* Logo Styles */
 .header__logo {
-    height: 75px; /* Your specified height */
+    height: 95px; /* Your specified height */
     width: auto;
     margin-right: 0; /* Remove margin to prevent shifting */
 }
@@ -421,7 +420,7 @@ body {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .header__logo {
-        height: 35px; /* Reduced height for smaller screens */
+        height: 55px; /* Reduced height for smaller screens */
     }
 
     .nav {
@@ -435,7 +434,7 @@ body {
 
 @media (max-width: 480px) {
     .header__logo {
-        height: 30px; /* Further reduced height */
+        height: 50px; /* Further reduced height */
     }
 
     .nav {
