@@ -82,7 +82,7 @@ body {
 }
 
 .subscription-section__logo {
-    width: 175px;
+    width: 125px;
     height: auto;
     margin-bottom: 20px;
     animation: fadeIn 1s var(--transition-easing);
@@ -115,7 +115,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0;
     max-width: 100%;
 }
 
@@ -1191,4 +1191,5 @@ body {
 
 .password-link {
     color: #4c4c4c; /* Dark gray */
+	font-size: 0.85rem;
 }
