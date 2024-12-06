@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ================================
        Scroll-to-Top Button
-    ================================ */
+    ================================ 
     const scrollTopBtn = document.createElement('button');
     scrollTopBtn.id = 'scrollToTopBtn';
     scrollTopBtn.innerHTML = '↑';
@@ -90,7 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
             top: 0,
             behavior: 'smooth'
         });
-    });
+    }); */
+	 
 
     /* ================================
        Hero Section Carousel
@@ -336,28 +337,27 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Optional: Scroll-to-Top Button Functionality
-document.addEventListener('DOMContentLoaded', function () {
-    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+// document.addEventListener('DOMContentLoaded', function () {
+    // const scrollToTopBtn = document.querySelector('.scroll-to-top');
 
     // Show or hide the button based on scroll position
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 300) { // Adjust the scroll value as needed
-            scrollToTopBtn.classList.add('scroll-to-top--visible');
-            scrollToTopBtn.classList.remove('scroll-to-top--hidden');
-        } else {
-            scrollToTopBtn.classList.add('scroll-to-top--hidden');
-            scrollToTopBtn.classList.remove('scroll-to-top--visible');
-        }
-    });
-
+    // window.addEventListener('scroll', function () {
+        // if (window.scrollY > 300) { // Adjust the scroll value as needed
+            // scrollToTopBtn.classList.add('scroll-to-top--visible');
+            // scrollToTopBtn.classList.remove('scroll-to-top--hidden');
+        // } else {
+            // scrollToTopBtn.classList.add('scroll-to-top--hidden');
+            // scrollToTopBtn.classList.remove('scroll-to-top--visible');
+        // }
+    // });
     // Scroll smoothly to the top when the button is clicked
-    scrollToTopBtn.addEventListener('click', function () {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-});
+    // scrollToTopBtn.addEventListener('click', function () {
+        // window.scrollTo({
+            // top: 0,
+            // behavior: 'smooth'
+        // });
+    // });
+// });
 //Notification bar summin
 window.addEventListener('load', function() {
     var notificationBar = document.querySelector('.notification-bar');

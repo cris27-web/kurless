@@ -82,7 +82,7 @@ body {
 }
 
 .subscription-section__logo {
-    width: 225px; /* Adjust the size as needed */
+    width: 175px; /* Adjust the size as needed */
     height: auto;
     margin-bottom: 20px; /* Space between logo and title */
     animation: fadeIn 1s ease-in-out; /* Optional: Adds a fade-in effect */
