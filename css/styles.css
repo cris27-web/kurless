@@ -517,62 +517,70 @@ body {
 }
 
 .product-card {
-    background-color: transparent;
-    border: none;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     display: flex;
     flex-direction: column;
-    cursor: pointer;
-    align-items: center; /* Center content horizontally */
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.product-card__image,
-#product-component-1729800134598 {
-    width: 100%;
-}
-
-.product-card:hover,
-.product-card:focus-within {
+.product-card:hover {
     transform: translateY(-5px);
-    border: 1px solid var(--color-accent);
     box-shadow: 0 10px 15px rgba(255, 255, 255, 0.1);
 }
 
-.product-card__image {
+/* Container for the images */
+.product-card__image-container {
+    position: relative;
     width: 100%;
-    max-height: 200px; /* Set a max height */
-    object-fit: contain; /* Ensure the whole image fits */
-    background-color: #fff; /* Optional: Add a white background */
-    padding: 10px; /* Optional: Add some padding */
+    overflow: hidden;
 }
 
-.product-card:hover .product-card__image,
-.product-card:focus-within .product-card__image {
-    transform: none; /* Remove zoom effect */
+.product-card__image-container img {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.product-card__image-container img:first-child {
+    opacity: 1;
+    z-index: 1;
+}
+
+.product-card__image-container img:last-child {
+    opacity: 0;
+    z-index: 2;
+}
+
+/* On hover, show the second image */
+.product-card:hover .product-card__image-container img:first-child {
+    opacity: 0;
+}
+
+.product-card:hover .product-card__image-container img:last-child {
+    opacity: 1;
 }
 
 .product-card__info {
-    padding: 15px; /* Reduced padding */
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center text within the card */
+    padding: 15px;
     text-align: center;
-    background-color: transparent; /* Removed background color */
+    background: transparent;
 }
 
 .product-card__title {
-    font-size: 1.2rem; /* Reduced font size */
-    margin-bottom: 8px; /* Reduced margin */
+    font-size: 1.2rem;
+    margin-bottom: 8px;
     color: var(--color-text);
     font-weight: 500;
 }
 
 .product-card__price {
-    font-size: 0.9rem; /* Reduced font size */
-    margin-bottom: 10px; /* Reduced margin */
+    font-size: 0.9rem;
+    margin-bottom: 10px;
     color: var(--color-accent);
     font-weight: bold;
 }
