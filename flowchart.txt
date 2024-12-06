@@ -1,0 +1,85 @@
+            ┌──────────────────────────┐
+            │         User Opens        │
+            │         Website           │
+            └───────┬──────────────────┘
+                    │
+                    v
+         ┌──────────────────────────┐
+         │   Email Subscription      │
+         │   Page Loads              │
+         └───────┬──────────────────┘
+                 │
+                 v
+       ┌───────────────────────────┐
+       │ User Enters Email Address  │
+       │ in Input Box               │
+       └───────┬───────────────────┘
+               │
+               v
+     ┌─────────────────────────┐
+     │ Click "Join" Button     │
+     │ - Subscribes User       │
+     │ - Redirects to Login    │
+     │   Page                  │
+     └─────────┬──────────────┘
+               │
+               v
+       ┌───────────────────────────┐
+       │         Login Page         │
+       │(Enter Universal Password)  │
+       └───────────┬──────────────┘
+                   │
+                   v
+         ┌──────────────────────────┐
+         │       Click "Login"       │
+         │   Redirects to Home Page  │
+         └─────────┬────────────────┘
+                   │
+                   v
+        ┌───────────────────────────┐
+        │         Home Page          │
+        │  - Shows 2 Product Images  │
+        │  - Home Button             │
+        │  - Shop Button             │
+        └───┬───────────┬──────────┘
+            │           │
+      [Click Product]   │ [Click Shop Button]
+            v           │
+            ┌─────────────────────┐
+            │      Shop Page       │<─┐
+            │ - 2 Products (Add    │  │
+            │   to Cart Buttons)   │  │
+            │ - Home Button        │  │
+            │ - Shop Button        │  │
+            └───────┬─────────────┘  │
+                    │                │
+            [Click Add to Cart]     │
+                    v                │
+           ┌───────────────────────┐ │
+           │  Cart Popup Appears    │ │
+           │ (Side of Screen)       │ │
+           └────────────────────────┘ │
+                                       │
+            [Click Home Button] <──────┘
+
+Description of Flow:
+
+Website Entry: User opens the website, which immediately shows the Email Subscription Page.
+
+Email Subscription Page:
+
+User enters their email and clicks "Join."
+This action subscribes them and redirects them to the Login Page.
+Login Page:
+
+User enters the universal password and clicks "Login."
+User is then redirected to the Home Page (index.html).
+Home Page:
+
+Displays two products as clickable elements (these lead to the Shop Page).
+Has navigation buttons: "Home" (which keeps user on the home page) and "Shop" (which goes to the Shop Page).
+Shop Page:
+
+Shows two products with "Add to Cart" buttons.
+Includes a Home button (which returns to the Home Page) and a Shop button (which stays on the current page).
+Clicking "Add to Cart" opens a cart popup on the side of the screen.

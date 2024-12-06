@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<! emailsub.html >
+<!-- emailsub.html -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -61,6 +61,12 @@
                 if (response.ok) {
                     form.reset();
                     formMessage.innerHTML = '<p class="subscription-form__success">Thank you for subscribing!</p>';
+
+                    // Redirect to login.html after 1 second delay
+                    setTimeout(() => {
+                        window.location.href = 'login.html';
+                    }, 1000);
+
                 } else {
                     return response.json().then(data => {
                         if (Object.hasOwn(data, 'errors')) {
