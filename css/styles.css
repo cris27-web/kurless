@@ -540,7 +540,7 @@ body {
 .product-card__image-container img {
     width: 100%;
     display: block;
-    position: absolute;
+    position: static;
     top: 0;
     left: 0;
     transition: opacity 0.3s ease-in-out;
