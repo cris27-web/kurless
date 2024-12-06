@@ -1184,4 +1184,7 @@ body {
 .subscription-form__input {
     padding-left: 35px; /* Space for the icon */
 }
-*/
+
+.password-link {
+    color: #4c4c4c; /* Dark gray */
+}
