@@ -183,6 +183,13 @@ body {
     margin-top: 10px;
 }
 
+.enter-password-link {
+    display: block;    /* Ensure it's a block-level element */
+    width: 100%;       /* Make it take the full width, forcing a new line */
+    text-align: center;/* Optional: center the text */
+    margin-top: 15px;
+}
+
 /* ================================
    Responsive Styles for Subscription Form
 ================================= */
