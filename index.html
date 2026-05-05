@@ -1,89 +1,120 @@
 <!DOCTYPE html>
-<!-- index.html -->
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kurless</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap"
-        rel="stylesheet"
-    />
-    <!-- Google Fonts for Shopify Components -->
-    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet" />
+    <meta name="description" content="Kurless ACM streetwear, including windbreakers and joggers." />
+    <title>Kurless ACM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Quantico&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <!-- Notification Bar -->
-    <div class="notification-bar">
+    <div class="notification-bar" aria-label="Store notice">
         <div class="notification-bar__content">
-            <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Free shipping over &pound;100</span>
+            <span>Limited ACM release</span>
+            <span>Secure checkout</span>
+            <span>Free shipping over &pound;100</span>
+            <span>Limited ACM release</span>
         </div>
     </div>
-	
-    <!-- Header -->
+
     <header class="header">
         <div class="header__container container">
-            <img src="assets/images/logo.png" alt="Kurless Store Logo" class="header__logo" />
-            <!-- <nav class="nav"> -->
-                <!-- <button class="nav__toggle" aria-label="Toggle navigation">&#9776;</button> -->
-                <!-- <ul class="nav__list"> -->
-                    <!-- <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li> -->
-                    <!-- <li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li> -->
-                <!-- </ul> -->
-            <!-- </nav> -->
+            <a href="index.html" class="header__brand" aria-label="Kurless home">
+                <img src="assets/images/logo.png" alt="Kurless ACM" class="header__logo" />
+            </a>
+            <nav class="nav" aria-label="Primary navigation">
+                <button class="nav__toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+                    <li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">Lookbook</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <section class="featured-products">
+        <section class="store-hero">
+            <div class="store-hero__media">
+                <img src="assets/images/jacket-front-32.png" alt="ACM windbreaker front" class="store-hero__image store-hero__image--front" />
+                <img src="assets/images/joggers-front.PNG" alt="ACM joggers front" class="store-hero__image store-hero__image--back" />
+            </div>
+            <div class="store-hero__content container">
+                <p class="eyebrow">Kurless ACM</p>
+                <h1>Streetwear with a sharper signal.</h1>
+                <p class="store-hero__copy">A focused drop of clean monochrome pieces built around bold marks, easy layering, and everyday movement.</p>
+                <div class="store-hero__actions">
+                    <a href="shop.html" class="button button--primary">Shop the drop</a>
+                    <a href="#featured" class="button button--secondary">View pieces</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="brand-strip" aria-label="Highlights">
+            <div class="container brand-strip__grid">
+                <div>
+                    <span class="brand-strip__label">Drop</span>
+                    <strong>ACM essentials</strong>
+                </div>
+                <div>
+                    <span class="brand-strip__label">Finish</span>
+                    <strong>Black, white, red</strong>
+                </div>
+                <div>
+                    <span class="brand-strip__label">Shipping</span>
+                    <strong>Free over &pound;100</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products" id="featured">
             <div class="container">
-                <div class="products-grid">
-
-                    <!-- Example Product #1 -->
+                <div class="section-heading">
+                    <p class="eyebrow">Featured</p>
+                    <h2>Current pieces</h2>
+                </div>
+                <div class="products-grid products-grid--featured">
                     <a href="shop.html" class="product-card">
                         <div class="product-card__image-container">
-                            <img src="assets/images/jacket-front-32.png" alt="Product 1 Front" class="product-card__image" />
-                            <img src="assets/images/jacket-back-32.png" alt="Product 1 Back" class="product-card__image" />
+                            <img src="assets/images/jacket-front-32.png" alt="ACM windbreaker front" class="product-card__image product-card__image--front" />
+                            <img src="assets/images/jacket-back-32.PNG" alt="ACM windbreaker back" class="product-card__image product-card__image--back" />
                         </div>
                         <div class="product-card__info">
-                            <h3 class="product-card__title">ACM WINDBREAKER</h3>
+                            <p class="product-card__meta">Outerwear</p>
+                            <h3 class="product-card__title">ACM Windbreaker</h3>
+                            <span class="product-card__cta">Shop now</span>
                         </div>
                     </a>
 
-                    <!-- Example Product #2 -->
                     <a href="shop.html" class="product-card">
                         <div class="product-card__image-container">
-                            <img src="assets/images/joggers-front.png" alt="Product 2 Front" class="product-card__image" />
-                            <img src="assets/images/joggers-back-12.png" alt="Product 2 Back" class="product-card__image" />
+                            <img src="assets/images/joggers-front.PNG" alt="ACM joggers front" class="product-card__image product-card__image--front" />
+                            <img src="assets/images/joggers-back-12.PNG" alt="ACM joggers back" class="product-card__image product-card__image--back" />
                         </div>
                         <div class="product-card__info">
-                            <h3 class="product-card__title">ACM JOGGERS</h3>
+                            <p class="product-card__meta">Bottoms</p>
+                            <h3 class="product-card__title">ACM Joggers</h3>
+                            <span class="product-card__cta">Shop now</span>
                         </div>
                     </a>
-
-                    <!-- Add more products as needed using the same pattern -->
-
                 </div>
             </div>
         </section>
     </main>
 
-    <script src="js/auth.js"></script>
-
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p class="footer__text">&copy; 2024 KurlessACM. All rights reserved.</p>
+        <div class="container footer__container">
+            <p class="footer__text">&copy; 2026 KurlessACM. All rights reserved.</p>
+            <a href="contact.html" class="footer__link">Contact</a>
         </div>
     </footer>
 
-    <!-- Optional: Include your JavaScript file for navigation toggle -->
+    <script src="js/auth.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>

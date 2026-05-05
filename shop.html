@@ -1,58 +1,65 @@
 <!DOCTYPE html>
-<! shop.html >
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurless</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Quantico&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Shop the current Kurless ACM drop." />
+    <title>Shop | Kurless ACM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Quantico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
- <!-- Notification Bar -->
-    <div class="notification-bar">
-    <div class="notification-bar__content">
-        <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		  
+    <div class="notification-bar" aria-label="Store notice">
+        <div class="notification-bar__content">
+            <span>Free shipping over &pound;100</span>
+            <span>Limited ACM release</span>
+            <span>Secure checkout</span>
+            <span>Free shipping over &pound;100</span>
+            <span>Limited ACM release</span>
+        </div>
     </div>
-</div>
-    <!-- Header -->
+
     <header class="header">
         <div class="header__container container">
-		<img src="assets/images/logo.png" alt="SplinterShop Logo" class="header__logo">
-            <!-- <nav class="nav"> -->
-                <!-- <button class="nav__toggle" aria-label="Toggle navigation">&#9776;</button> -->
-                <!-- <ul class="nav__list"> -->
-                    <!-- <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li> -->
-                    <!-- <li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li> -->
-                <!-- </ul> -->
-            <!-- </nav> -->
+            <a href="index.html" class="header__brand" aria-label="Kurless home">
+                <img src="assets/images/logo.png" alt="Kurless ACM" class="header__logo">
+            </a>
+            <nav class="nav" aria-label="Primary navigation">
+                <button class="nav__toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="shop.html" class="nav__link nav__link--active">Shop</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">Lookbook</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
+        <section class="shop-intro">
+            <div class="container shop-intro__grid">
+                <div>
+                    <p class="eyebrow">Shop</p>
+                    <h1>Current ACM drop</h1>
+                </div>
+                <p>Select your size, add to cart, and check out securely through Shopify.</p>
+            </div>
+        </section>
+
         <section class="products-section">
             <div class="container">
-                <!-- Products Grid -->
                 <div class="products-grid">
-                    
-                    <!-- Example Products -->
-					      <!-- Jacket -->
-                    <div class="product-card">
+                    <div class="product-card shopify-card">
 						<div id='product-component-1733480428888'></div>
-                        </div>
-						
-						    <!-- Joggers -->
-                    <div class="product-card">
-						<div id='product-component-1733480533522'></div>
-                        </div>
                     </div>
-                    <!-- End of Example Products -->
+						
+                    <div class="product-card shopify-card">
+						<div id='product-component-1733480533522'></div>
+                    </div>
+                </div>
 
                     <!-- Shopify Collection Buy Button Embed Code -->
 	
@@ -745,19 +752,18 @@
 </script>
 
                     <!-- End of Shopify Collection Buy Button Embed Code -->
-                </div>
             </div>
         </section>
     </main>
-<script src="js/auth.js"></script>
-    <!-- Footer -->
+    <script src="js/auth.js"></script>
+
     <footer class="footer">
-        <div class="container">
-            <p class="footer__text">&copy; 2024 KurlessACM. All rights reserved.</p>
+        <div class="container footer__container">
+            <p class="footer__text">&copy; 2026 KurlessACM. All rights reserved.</p>
+            <a href="contact.html" class="footer__link">Contact</a>
         </div>
     </footer>
 
-    <!-- Optional: Include your JavaScript file for navigation toggle -->
     <script src="js/scripts.js"></script>
 </body>
 </html>

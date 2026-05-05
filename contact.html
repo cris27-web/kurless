@@ -1,87 +1,78 @@
 <!DOCTYPE html>
-<! contact.html >
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurless</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Quantico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Kurless ACM about orders, sizing, and stock." />
+    <title>Contact | Kurless ACM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Quantico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
- <!-- Notification Bar -->
-    <!-- Notification Bar -->
-    <div class="notification-bar">
-    <div class="notification-bar__content">
-        <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		 <span>Free shipping with orders over &pound;100&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		  
+    <div class="notification-bar" aria-label="Store notice">
+        <div class="notification-bar__content">
+            <span>Free shipping over &pound;100</span>
+            <span>Limited ACM release</span>
+            <span>Secure checkout</span>
+            <span>Free shipping over &pound;100</span>
+            <span>Limited ACM release</span>
+        </div>
     </div>
-</div>
-    <!-- Header -->
+
     <header class="header">
         <div class="header__container container">
-            <img src="assets/images/logo.png" alt="SplinterShop Logo" class="header__logo">
-            <h1 class="header__title">Kurless Store</h1>
-            <nav class="nav">
-                <button class="nav__toggle" aria-label="Toggle navigation">&#9776;</button>
+            <a href="index.html" class="header__brand" aria-label="Kurless home">
+                <img src="assets/images/logo.png" alt="Kurless ACM" class="header__logo" />
+            </a>
+            <nav class="nav" aria-label="Primary navigation">
+                <button class="nav__toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
                 <ul class="nav__list">
                     <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li>
-                    <li class="nav__item"><a href="about.html" class="nav__link">Catalogue</a></li>
-                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact Us</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">Lookbook</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link nav__link--active">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
         <section class="contact-section">
             <div class="container">
-                <h2 class="contact-section__title">Get in Touch</h2>
-                <!-- Contact Form Box -->
+                <div class="section-heading">
+                    <p class="eyebrow">Contact</p>
+                    <h1 class="contact-section__title">Get in touch</h1>
+                </div>
                 <div class="contact-form-box">
-                    <form class="contact-section__form" action="submit_form.php" method="post">
-                        <!-- Name Field -->
+                    <form class="contact-section__form" action="https://formspree.io/f/mrbgpdyq" method="POST">
                         <label for="name" class="contact-section__label">Name</label>
-                        <input type="text" id="name" name="name" class="contact-section__input" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" class="contact-section__input" placeholder="Your name" autocomplete="name" required />
 
-                        <!-- Email Field -->
                         <label for="email" class="contact-section__label">Email</label>
-                        <input type="email" id="email" name="email" class="contact-section__input" placeholder="Your Email" required>
+                        <input type="email" id="email" name="email" class="contact-section__input" placeholder="you@example.com" autocomplete="email" required />
 
-                        <!-- Subject Field -->
                         <label for="subject" class="contact-section__label">Subject</label>
-                        <input type="text" id="subject" name="subject" class="contact-section__input" placeholder="Subject">
+                        <input type="text" id="subject" name="subject" class="contact-section__input" placeholder="Sizing, order, or stock question" />
 
-                        <!-- Message Field -->
                         <label for="message" class="contact-section__label">Message</label>
-                        <textarea id="message" name="message" class="contact-section__textarea" rows="5" placeholder="Your Message" required></textarea>
+                        <textarea id="message" name="message" class="contact-section__textarea" rows="6" placeholder="How can we help?" required></textarea>
 
-                        <!-- Submit Button -->
-                        <button type="submit" class="contact-section__button">Send Message</button>
+                        <button type="submit" class="contact-section__button">Send message</button>
                     </form>
                 </div>
-                <!-- End of Contact Form Box -->
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p class="footer__text">&copy; 2024 KurlessACM. All rights reserved.</p>
+        <div class="container footer__container">
+            <p class="footer__text">&copy; 2026 KurlessACM. All rights reserved.</p>
+            <a href="shop.html" class="footer__link">Shop</a>
         </div>
     </footer>
 
-    <!-- Scroll-to-Top Button -->
-    <button class="scroll-to-top" aria-label="Scroll to top">&#8679;</button>
-
-    <!-- Optional: Include your JavaScript file for navigation toggle -->
     <script src="js/scripts.js"></script>
 </body>
 </html>
