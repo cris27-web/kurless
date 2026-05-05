@@ -1,10 +1,8 @@
-// js/auth.js
-
-document.addEventListener('DOMContentLoaded', function() {
+(() => {
   const isAuthenticated = localStorage.getItem('authenticated');
 
   if (isAuthenticated !== 'true') {
-    // Redirect to login page
-    window.location.href = 'login.html';
+    const next = encodeURIComponent(window.location.pathname.split('/').pop() || 'shop.html');
+    window.location.replace(`login.html?next=${next}`);
   }
-});
+})();

@@ -13,12 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const closeMenu = () => {
             navList.classList.remove('nav__list--open');
             navOverlay.classList.remove('nav-overlay--active');
+            document.body.classList.remove('nav-is-open');
             navToggle.setAttribute('aria-expanded', 'false');
         };
 
         navToggle.addEventListener('click', () => {
             const isOpen = navList.classList.toggle('nav__list--open');
             navOverlay.classList.toggle('nav-overlay--active', isOpen);
+            document.body.classList.toggle('nav-is-open', isOpen);
             navToggle.setAttribute('aria-expanded', String(isOpen));
         });
 
@@ -52,7 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if ((email && !emailPattern.test(email.value.trim())) || (message && !message.value.trim())) {
                 event.preventDefault();
-                alert('Please add a valid email and message before sending.');
+                const firstInvalid = !emailPattern.test(email.value.trim()) ? email : message;
+                firstInvalid.focus();
+                contactForm.dataset.validation = 'Please add a valid email and message before sending.';
             }
         });
     }

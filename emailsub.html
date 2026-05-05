@@ -1,94 +1,81 @@
 <!DOCTYPE html>
-<!-- emailsub.html -->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurless - Subscribe</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <!-- Google Fonts for Shopify Components -->
-    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Join Kurless ACM updates for release news and early access." />
+    <title>Subscribe | Kurless ACM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Quantico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
-
-    <!-- Main Content: Subscription Form -->
+<body class="access-page">
     <main>
         <section class="subscription-section">
-            <div class="container">
-                <!-- Big Logo Added Here -->
-                <img src="assets/images/logo.png" alt="Kurless Store Big Logo" class="subscription-section__logo"> 
-                <form id="subscription-form" class="subscription-form" action="https://formspree.io/f/mrbgpdyq" method="POST">
-                    <!-- Honeypot Field (Hidden for Spam Protection) -->
-                    <input type="text" name="_gotcha" style="display:none" aria-hidden="true">
+            <div class="container access-panel">
+                <a href="index.html" aria-label="Kurless home">
+                    <img src="assets/images/logo.png" alt="Kurless ACM" class="subscription-section__logo" />
+                </a>
+                <p class="eyebrow">Early access</p>
+                <h1 class="access-panel__title">Join the release list</h1>
+                <p class="access-panel__copy">Get drop updates, sizing notes, and password access when the next release goes live.</p>
 
-                    <input type="email" name="email" id="email" class="subscription-form__input" placeholder="Enter your email" required aria-label="Email Address">
+                <form id="subscription-form" class="subscription-form" action="https://formspree.io/f/mrbgpdyq" method="POST">
+                    <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+                    <label class="sr-only" for="email">Email address</label>
+                    <input type="email" name="email" id="email" class="subscription-form__input" placeholder="Email address" autocomplete="email" required />
                     <button type="submit" class="subscription-form__button">Join</button>
                 </form>
-				
-					<!-- Link to Login Page with Lock Icon -->
-                    <p class="enter-password-link" style="margin-top: 15px;">
-                         <a href="login.html" class="password-link">
-						 <span class="lock-icon"></span> Enter using password
-						 </a>
-						 
-						 
-                <!-- Success and Error Message Container -->
-                <div id="form-message"></div>
+
+                <p class="enter-password-link">
+                    <a href="login.html" class="password-link">Enter using password</a>
+                </p>
+                <div id="form-message" class="form-message" aria-live="polite"></div>
             </div>
         </section>
     </main>
 
-    <!-- Footer (Optional) -->
     <footer class="footer">
-        <div class="container">
+        <div class="container footer__container">
             <p class="footer__text">&copy; 2026 KurlessACM. All rights reserved.</p>
+            <a href="index.html" class="footer__link">Home</a>
         </div>
     </footer>
 
-    <!-- Scroll-to-Top Button -->
-    <button class="scroll-to-top" aria-label="Scroll to top">&#8679;</button>
-
-    <!-- JavaScript for Form Handling -->
     <script>
         const form = document.getElementById('subscription-form');
         const formMessage = document.getElementById('form-message');
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            formMessage.textContent = '';
 
-            const formData = new FormData(form);
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form),
+                    headers: {
+                        Accept: 'application/json'
+                    }
+                });
 
-            fetch(form.action, {
-                method: form.method,
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
+                if (!response.ok) {
+                    const data = await response.json();
+                    const message = Object.hasOwn(data, 'errors')
+                        ? data.errors.map((error) => error.message).join(', ')
+                        : 'Something went wrong. Please try again.';
+                    throw new Error(message);
                 }
-            })
-            .then(response => {
-                if (response.ok) {
-                    form.reset();
-                    formMessage.innerHTML = '<p class="subscription-form__success">Thank you for subscribing!</p>';
 
-                    // Redirect to login.html after 1 second delay
-                    setTimeout(() => {
-                        window.location.href = 'login.html';
-                    }, 1000);
-
-                } else {
-                    return response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                            throw new Error(data.errors.map(error => error.message).join(", "));
-                        } else {
-                            throw new Error("Something went wrong. Please try again.");
-                        }
-                    });
-                }
-            })
-            .catch(error => {
+                form.reset();
+                formMessage.innerHTML = '<p class="subscription-form__success">You are on the list. Redirecting...</p>';
+                setTimeout(() => {
+                    window.location.href = 'login.html';
+                }, 1000);
+            } catch (error) {
                 formMessage.innerHTML = `<p class="subscription-form__error">${error.message}</p>`;
-            });
+            }
         });
     </script>
 </body>

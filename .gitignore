@@ -1,2 +1,8 @@
 # Local Netlify folder
 .netlify
+
+# Dependencies and local-only files
+node_modules/
+firebase.js
+.env
+.env.*
